@@ -67,6 +67,7 @@ git branch (display exisiting branches)
 git switch -c <branch name> (create branch and switch into it)
 git switch <branch name> (switch branch)
 git checkout <branch name> (switch to another branch with classic command )
+git branch -m oldName newName
 
 # git delete branch
 git branch -d <branch/name> (delete branches that are fully merge, git refuses to delete unmerged branches)
