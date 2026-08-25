@@ -1,4 +1,4 @@
-package OOP1;
+package Encapsulation;
 
 public class InventoryManager {
     private String[] brands = new String[10];
