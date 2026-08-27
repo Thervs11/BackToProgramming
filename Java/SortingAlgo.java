@@ -1,18 +1,19 @@
 import java.util.Scanner;
+
 public class SortingAlgo {
-    public static void main(String[]args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.print("Sorting Algorithm\n\nEnter the size: ");
         int size = scanner.nextInt();
-        
+
         System.out.println("Enter " + size + " numbers to sort\n");
         int[] arr = new int[size];
         for (int i = 0; i < arr.length; i++) {
             System.out.print("\t" + (i + 1) + ". ");
             arr[i] = scanner.nextInt();
-        } 
-        
+        }
+
         System.out.println("Choose a sorting algorithm:");
         System.out.println("\t[1] = Bubble Sort");
         System.out.println("\t[2] = Balloon Sort");
@@ -23,36 +24,56 @@ public class SortingAlgo {
         System.out.println("\t[0] = Exit");
         System.out.print("Choose: ");
         int option = scanner.nextInt();
-       // while (option != 0) {
-            switch(option) {
+        while (option != 0) {
+            switch (option) {
                 case 0:
-                  
+                    scanner.close();
                     break;
                 case 1:
                     bubbleSort(arr);
+                    System.out.print("Sorted Array using Bubble Sort: ");
+                    display(arr);
                     break;
                 case 2:
                     balloonSort(arr);
+                    System.out.print("Sorted Array using Balloon Sort: ");
+                    display(arr);
                     break;
                 case 3:
                     selectionSort(arr);
+                    System.out.print("Sorted Array using Balloon Sort: ");
+                    display(arr);
                     break;
                 case 4:
                     mergeSort(arr);
+                    System.out.print("Sorted Array using Merge Sort: ");
+                    display(arr);
                     break;
                 case 5:
-                   // insertionSort(arr);
+                    insertionSort(arr);
+                    System.out.print("Sorted Array using Insertion Sort: ");
+                    display(arr);
                     break;
                 case 6:
-                   // quickSort(arr);
+                    quickSort(arr, 0, arr.length - 1);
+                    System.out.print("Sorted Array using Quick Sort: ");
+                    display(arr);
                     break;
                 default:
+                    System.out.println("Invalid input. Try Again!\nThe input should be between (0-6)");
                     break;
             }
-        //}
-        
+        }
+
     }
-    public static void bubbleSort(int[] arr) {
+
+    private static void display(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+    private static void bubbleSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
@@ -62,29 +83,24 @@ public class SortingAlgo {
                 }
             }
         }
-        System.out.print("Sorted Array using Bubble Sort: ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
     }
-    public static void balloonSort(int[] arr) {
+
+    private static void balloonSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             int k = i;
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j] < arr[k]) {
                     k = j;
-                    int temp =  arr[i];
+                    int temp = arr[i];
                     arr[i] = arr[k];
                     arr[k] = temp;
-                }   
+                }
             }
         }
-        System.out.print("Sorted Array using Balloon Sort: ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
+
     }
-    public static void selectionSort(int[] arr) {
+
+    private static void selectionSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             int min = i;
             for (int j = i + 1; j < arr.length; j++) {
@@ -96,14 +112,12 @@ public class SortingAlgo {
             arr[i] = arr[min];
             arr[min] = temp;
         }
-        System.out.print("Sorted Array using Balloon Sort: ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
     }
-    public static void mergeSort(int[] arr) {
+
+    private static void mergeSort(int[] arr) {
         int length = arr.length;
-        if (length <= 1) return;
+        if (length <= 1)
+            return;
 
         int middle = length / 2;
         int[] leftArr = new int[middle];
@@ -112,7 +126,7 @@ public class SortingAlgo {
         int i = 0;
         int j = 0;
 
-        for (; i < length; i++) {
+        for (; i < arr.length; i++) {
             if (i < middle) {
                 leftArr[i] = arr[i];
             } else {
@@ -123,12 +137,15 @@ public class SortingAlgo {
         mergeSort(leftArr);
         mergeSort(rightArr);
         merge(leftArr, rightArr, arr);
+
     }
+
     private static void merge(int[] leftArr, int[] rightArr, int[] arr) {
         int leftSize = arr.length / 2;
-        int rightSize = arr.length - leftSize; 
-        int i = 0, l = 0, r = 0; //indices
-        //check the conditions for merging
+        int rightSize = arr.length - leftSize;
+        int i = 0, l = 0, r = 0; // indices
+
+        // check the conditions for merging
         while (l < leftSize && r < rightSize) {
             if (leftArr[l] < rightArr[r]) {
                 arr[i] = leftArr[l];
@@ -150,5 +167,45 @@ public class SortingAlgo {
             i++;
             r++;
         }
+    }
+
+    private static void insertionSort(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int temp = arr[i];
+            int j = i - 1;
+
+            while (j >= 0 && arr[j] > temp) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = temp;
+        }
+    }
+
+    private static void quickSort(int[] arr, int start, int end) {
+        if (end <= start)
+            return; // base case
+        int pivot = partition(arr, start, end);
+        quickSort(arr, start, pivot - 1);
+        quickSort(arr, pivot + 1, end);
+    }
+
+    private static int partition(int[] arr, int start, int end) {
+        int pivot = arr[end];
+        int i = start - 1;
+
+        for (int j = start; j <= end - 1; j++) {
+            if (arr[j] < pivot) {
+                i++;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        i++;
+        int temp = arr[i];
+        arr[i] = arr[end];
+        arr[end] = temp;
+        return i;
     }
 }
