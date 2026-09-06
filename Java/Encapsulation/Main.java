@@ -1,19 +1,21 @@
 package Encapsulation;
+
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[]args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         InventoryManager manager = new InventoryManager();
         int option = 0;
 
         while (option != 3) {
-            System.out.print("\\nOptions:\\n\\t[1] Add Single Product\\n\\t[2] Add Box Product\\n\\t[3] Exit\\nChoice: ");
+            System.out
+                    .print("\\nOptions:\\n\\t[1] Add Single Product\\n\\t[2] Add Box Product\\n\\t[3] Exit\\nChoice: ");
             option = scanner.nextInt();
             scanner.nextLine();
 
-            switch(option) {
+            switch (option) {
                 case 1:
                     System.out.print("Brand: ");
                     String singleBrand = scanner.nextLine();
@@ -64,5 +66,6 @@ public class Main {
             System.out.println("\tBoxes: " + totalBoxes);
             System.out.println("\tTotal Pieces: " + totalPieces + "\n");
         }
+        scanner.close();
     }
 }
