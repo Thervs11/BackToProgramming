@@ -1,0 +1,38 @@
+[
+ {
+    "id": 1,
+    "studentNumber": "2024-0001",
+    "name": "Juan Dela Cruz",
+    "course": "BS Information Technology",
+    "year": 3,
+    "section": "2-1",
+    "email": "juan@example.com"
+  },
+  {
+    "id": 2,
+    "studentNumber": "2024-0002",
+    "name": "Maria Santos",
+    "course": "BS Information Technology",
+    "year": 3,
+    "section": "2-1",
+    "email": "maria@example.com"
+  },
+  {
+    "id": 3,
+    "studentNumber": "2024-0003",
+    "name": "Pedro Reyes",
+    "course": "BS Information Technology",
+    "year": 3,
+    "section": "2-1",
+    "email": "pedro@example.com"
+  },
+  {
+    "id": 4,
+    "studentNumber": "2024-0004",
+    "name": "Ana Garcia",
+    "course": "BS Information Technology",
+    "year": 3,
+    "section": "2-1",
+    "email": "ana@example.com"
+  }
+]

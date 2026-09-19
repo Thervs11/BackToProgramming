@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name" : "Juan De Lokaj",
+        "studentNumber" : "202404123",
+        "course" : "BSIT",
+        "year" : 3,
+        "section" : "3-1",
+        "email" : "juanlokajin@gmail.com"
+    },
+    {
+        "id": 2,
+        "name" : "Bustin Jieber",
+        "studentNumber" : "202404456",
+        "course" : "BSIE",
+        "year" : 3,
+        "section" : "3-2",
+        "email" : "bjinthehouse@gmail.com"
+    },
+    {
+        "id": 3,
+        "name" : "Juan DePoutah",
+        "studentNumber" : "202404777",
+        "course" : "BSCS",
+        "year" : 3,
+        "section" : "3-3",
+        "email" : "juan@deputs"
+    }
+]
