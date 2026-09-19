@@ -1,0 +1,27 @@
+[
+    {
+        "animalName" : "Dog", 
+        "noOfFeet" : "4",
+        "type" : "Domestic"
+    },
+    {
+        "animalName" : "Cat", 
+        "noOfFeet" : "4",
+        "type" : "Domestic"
+    },
+    {
+        "animalName" : "Tarantula", 
+        "noOfFeet" : "8",
+        "type" : "Exotic"
+    },
+    {
+        "animalName" : "Centipede", 
+        "noOfFeet" : "382",
+        "type" : "Exotic"
+    },
+    {
+        "animalName" : "Chicken", 
+        "noOfFeet" : "2",
+        "type" : "Domestic"
+    }
+]
