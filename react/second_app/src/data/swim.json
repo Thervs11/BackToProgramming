@@ -1,0 +1,26 @@
+[
+    {
+        "strokeType" : "Freestyle",
+        "difficulty" : "Easy",
+        "howFast" : "One of the fastest stroke",
+        "comments" : "My fastest main stroke right now."
+    },
+    {
+        "strokeType" : "Breast Stroke",
+        "difficulty" : "Moderate",
+        "howFast" : "A Slow and easy to swim stroke.",
+        "comments" : "Good for recovery, easy to learn hard to master."
+    },
+    {
+        "strokeType" : "Back Stroke",
+        "difficulty" : "Hard",
+        "howFast" : "One of the fastest stroke",
+        "comments" : "I hate it, it drowns me, but i love the underwaters of it."
+    },
+    {
+        "strokeType" : "Butterfly Stroke",
+        "difficulty" : "Very Hard",
+        "howFast" : "A very fast stroke",
+        "comments" : "One of my main stroke, Hard to learn and to master. Physically demanding yet fun to do."
+    }
+]

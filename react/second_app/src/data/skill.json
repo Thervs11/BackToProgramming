@@ -1,0 +1,17 @@
+[
+    {
+        "skillName" : "Drawing",
+        "description" : "Can do realistic portraits, can copy anything",
+        "howLong" : 13
+    },
+    {
+        "skillName" : "Editing",
+        "description" : "Can edit montage, cinematic videos, shoftfilms, VFX, and absolutely anything.",
+        "howLong" : 9
+    },
+    {
+        "skillName" : "Cooking",
+        "description" : "Especializes in american and korean style fried chickens.",
+        "howLong" : 1
+    }
+]
